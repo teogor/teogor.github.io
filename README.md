@@ -16,7 +16,10 @@ Credit section inside website should be linked to
 
 ```html
 <a href="https://github.com/teogor">
-    <p class="text-slate-300 footer mt-20 cursorHover"> Made with <span class="text-red-600">❤</span> by <span class="text-blue-600">Teodor Grigor.</span>
+    <p class="text-slate-300 footer mt-24 cursorHover">
+        Made with <span class="text-red-600">❤</span> by <span class="text-purple-500">Teodor Grigor</span>
+        <br>
+        Copyright &copy;<script>document.write(/\d{4}/.exec(Date())[0])</script> All rights reserved
     </p>
 </a>
 ```

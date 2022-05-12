@@ -665,9 +665,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-primary {
   background-color: rgb(20 22 26 / 0.9);
 }
-.bg-blue-600 {
+.bg-purple-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(70 21 207 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -787,9 +787,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
-.text-blue-600 {
+.text-purple-500 {
   --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
+  color: rgb(89 47 212 / var(--tw-text-opacity));
+}
+.text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgb(70 21 207 / var(--tw-text-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -840,8 +844,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 :root {
     --background: #14161a;
-    --accent-color: #0e73e6;
-    --hover-accent-color: #1361b9;
+    --accent-color: #2b0ee6;
+    --hover-accent-color: #3113b9;
 }
 * {
     padding: 0;
@@ -927,7 +931,7 @@ a {
     fill: aliceblue
 }
 .logoHover:hover {
-        fill: #0e73e6;
+        fill: #6923f3;
     }
 @-webkit-keyframes fadeInUp {
     0% {
@@ -982,15 +986,15 @@ a {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .hover\:-top-1:hover {
-  top: -0.25rem;
+  top: -0.3rem;
 }
-.hover\:bg-blue-600:hover {
+.hover\:bg-purple-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(70 21 207 / var(--tw-bg-opacity));
 }
-.hover\:bg-blue-700:hover {
+.hover\:bg-purple-700:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(50 14 150 / var(--tw-bg-opacity));
 }
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
