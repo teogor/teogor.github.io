@@ -677,8 +677,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
-.bg-\[linear-gradient\(90deg\2c \#ffd33d\2c \#ea4aaa_17\%\2c \#b34bff_34\%\2c \#01feff_51\%\2c \#ffd33d_68\%\2c \#ea4aaa_85\%\2c \#b34bff\)\] {
-  background-image: linear-gradient(90deg,#ffd33d,#ea4aaa 17%,#b34bff 34%,#01feff 51%,#ffd33d 68%,#ea4aaa 85%,#b34bff);
+.bg-\[linear-gradient\] {
+  background-image: linear-gradient(90deg, #815cbf, #5b419d 50%, #815cbf);
 }
 .bg-\[length\:300\%_100\%\] {
   background-size: 300% 100%;
