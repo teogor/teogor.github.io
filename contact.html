@@ -253,7 +253,7 @@
         <p class="text-slate-300 footer mt-24 cursorHover">
             Made with 💜 by <span class="text-purple-500">Teodor Grigor</span>
             <br>
-            Copyright &copy;<script>document.write(/\d{4}/.exec(Date())[0])</script> All rights reserved
+            Copyright &copy;<span id="year"></span> All rights reserved
         </p>
 
     </div>
@@ -262,6 +262,7 @@
 <div class="cursor-dot-outline"></div>
 <div class="cursor-dot"></div>
 <script src="./dist/bundle.js"></script>
+<script>document.getElementById("year").innerHTML = new Date().getFullYear().toString();</script>
 
 </body>
 
