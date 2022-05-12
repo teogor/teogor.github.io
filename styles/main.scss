@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Raisonne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/raisonne.woff) format('woff'), url(../fonts/raisonne.woff2) format('woff2');
+}
+
+:root {
+    --background: #14161a;
+    --accent-color: #0e73e6;
+    --hover-accent-color: #1361b9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html * {cursor:none}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+
+    &:hover {
+        background: var(--hover-accent-color);
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-clip: content-box;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--background);
+}
+/* custom scrollbar */
+
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Raisonne', Ubuntu, 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    background: var(--background);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* loader */
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: var(--accent-color);
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+/* loader */
+
+@keyframes progress-animation {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+.logoHover {
+    transition: all .2s ease;
+    fill: aliceblue;
+
+    &:hover {
+        fill: #0e73e6;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(35%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width: 768px) {   
+    .fadeInUp {
+        animation: fadeInUp 1s;
+    }
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.cursor-dot-outline {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
