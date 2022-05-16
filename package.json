@@ -1,0 +1,44 @@
+{
+  "name": "teogor.github.io",
+  "version": "2.1.0",
+  "description": "Personal portfolio built with TailwindCSS, AlpineJS & GSAP",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "build": "postcss ./styles/main.scss -o ./styles/tailwindoutput.css --watch",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teogor/teogor.github.io.git"
+  },
+  "keywords": [
+    "Teodor Grigor, Android Engineer, teogor, teogor.github.io"
+  ],
+  "author": {
+    "name": "Teodor Grigor",
+    "email": "teogor@gmail.com",
+    "url": "https://github.com/teogor"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teogor/teogor.github.io/issues"
+  },
+  "homepage": "https://github.com/teogor/teogor.github.io#readme",
+  "dependencies": {
+    "@alpinejs/intersect": "^3.9.2",
+    "@barba/core": "^2.9.7",
+    "alpinejs": "^3.9.2",
+    "autoprefixer": "^10.4.4",
+    "gsap": "^3.9.1",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nesting": "^10.1.3",
+    "postcss-scss": "^4.0.3",
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
