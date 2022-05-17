@@ -14,14 +14,16 @@
     <meta content="Android Dev & Video Game Dev building with modern tech stack" property="og:description">
     <meta content="https://teogor.github.io" property="og:url">
     <meta content="teogor.github.io/skills" property="og:site_name">
-    <meta content="https://raw.githubusercontent.com/teogor/teogor.github.io/main/res/site-cover.png" property="og:image">
+    <meta content="https://raw.githubusercontent.com/teogor/teogor.github.io/main/res/site-cover.png"
+          property="og:image">
 
-    <meta property="twitter:domain" content="teogor.github.io">
-    <meta property="twitter:url" content="https://teogor.github.io/skills">
+    <meta content="teogor.github.io" property="twitter:domain">
+    <meta content="https://teogor.github.io/skills" property="twitter:url">
     <meta content="summary_large_image" name="twitter:card">
     <meta content="Teodor Grigor - Skills" name="twitter:title">
     <meta content="Android Dev & Video Game Dev building with modern tech stack" name="twitter:description">
-    <meta content="https://raw.githubusercontent.com/teogor/teogor.github.io/main/res/site-cover.png" property="twitter:image">
+    <meta content="https://raw.githubusercontent.com/teogor/teogor.github.io/main/res/site-cover.png"
+          property="twitter:image">
 
 
     <!-- stylesheets -->
@@ -35,9 +37,33 @@
     <link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="favicons/site.webmanifest" rel="manifest">
 
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P9HX23X');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body data-barba="wrapper" x-data>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe height="0"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P9HX23X" style="display:none;visibility:hidden"
+            width="0"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="load-container">
     <div class="loading-screen"></div>
 </div>
@@ -180,7 +206,7 @@
         </div>
 
         <p class="text-slate-300 footer mt-24 cursorHover">
-            Made with <img src="./res/images/purple-heart.png" class="purple-heart" alt="Purple Heart Icon"/> by
+            Made with <img alt="Purple Heart Icon" class="purple-heart" src="./res/images/purple-heart.png"/> by
             <span class="text-purple-500">Teodor Grigor</span>
             <br>
             Copyright &copy;<span id="year"></span> All rights reserved
