@@ -23,26 +23,4 @@
         <priority>0.80</priority>
     </url>
 
-    <!--  teogor.github.io domain  -->
-    <url>
-        <loc>https://teogor.github.io/</loc>
-        <lastmod>2022-05-16T11:14:24+00:00</lastmod>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://teogor.github.io/works</loc>
-        <lastmod>2022-05-16T11:14:24+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://teogor.github.io/skills</loc>
-        <lastmod>2022-05-16T11:14:24+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://teogor.github.io/contact</loc>
-        <lastmod>2022-05-16T11:14:24+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
-
 </urlset>
