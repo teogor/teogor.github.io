@@ -17,10 +17,10 @@ Credit section inside website should be linked to
 ```html
 <a href="https://github.com/teogor">
     <p class="text-slate-300 footer mt-24 cursorHover">
-        Made with <img src="./res/images/purple-heart.png" style="display: inline;" width="18px" height="18px" alt="Purple Heart Icon"/> by
+        Made with <img src="https://teogor.dev/res/images/purple-heart.png" style="display: inline;" width="18px" height="18px" alt="Purple Heart Icon"/> by
         <span class="text-purple-500">Teodor Grigor</span>
         <br>
-        Copyright &copy;<span id="year"></span> All rights reserved
+        Copyright &copy;2022 All rights reserved
     </p>
 </a>
 ```
