@@ -1,4 +1,4 @@
-## Source Code for my [Personal Portfolio](https://teogor.github.io)
+## Source Code for my [Personal Portfolio](https://teogor.dev)
 
 ### Built with love by <a href="https://github.com/teogor">Teodor Grigor.</a>
 
