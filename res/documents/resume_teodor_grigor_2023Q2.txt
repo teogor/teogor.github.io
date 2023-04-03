@@ -1,0 +1,125 @@
+﻿Teodor Grigor
+	    GitHub Profile | LinkedIn Profile | Portfolio
+	grigor.teodor@gmail.com
+	OOP (Kotlin, Java, C++, PHP, Python),
+MVVM, Jetpack Compose, REST APIs, Git
+	EXPERIENCE
+	
+
+	
+
+	
+
+	
+
+	
+
+	MarleySpoon
+
+
+Android Developer - Freelancer        June 2023 – Jan 2023
+* Design, develop and maintain high-quality Android applications
+* Collaborate with cross-functional teams to define, design and ship new features
+* Identify and fix bugs, improve application performance and overall user experience
+* Stay up-to-date with new Android development technologies and industry trends
+* Tech Stack: Kotlin, XML, MVI Pattern
+Wave Studio
+
+
+Android Developer - Freelancer        May 2021 – May 2022
+
+
+* Worked in an Agile team and with relevant teammates from different departments
+* Managed applications with 200M+ instals and 1M+ users active daily
+* Used REST APIs to query the company’s platform
+* Tech Stack: Kotlin, Java, XML, MVVM Pattern
+ZeoFlow | Northampton, United Kingdom
+
+
+Lead Android Developer        May 2019 – April 2021
+
+
+* Drafted technical documents, including whitepapers.
+* Created the Android mobile application in Android Studio as well as testing the lifecycle and bring improvements to the memory usage
+* Built a REST API to provide features for login, register, user view, posts view and different other tasks
+* Tech Stack: Kotlin, Java, C++, XML, PHP, MVVM Pattern
+Contar.io | Brasov, Romania
+
+
+Lead Android Developer        September 2019 – October 2019
+
+
+* Developed an android application in Android Studio for an online platform and led a team of 3 android developers.
+* Built a REST API to provide features for login, register, profile view and other tasks from the application.
+* Tech Stack: Kotlin, Java, XML, PHP, MVVM Pattern
+
+
+DolphPire | Brasov, Romania
+
+
+Lead Android Developer        March 2018 – August 2019
+
+
+* Designed, developed, tested and released different features for the company’s applications.
+* Used REST APIs to pull server data and display on the applications.
+Android Developer        September 2017 – February 2018
+
+
+* Interpreted the System Requirements Specification and System Design Specifications and developed solutions for the problems.
+* Worked with the company’s Product Manager, Mobile Lead and UX/UI specialists to understand the business requirements
+
+
+FronzeCode | Brasov, Romania
+
+
+Junior Android Developer        November 2016 – August 2017
+
+
+* Worked as part of a team of 2 developers to develop and design application components.
+* Worked closely with the teammate to establish problem specifications and system design.
+________________
+
+
+
+
+Education
+University of Northampton | Northampton, United Kingdom
+Games Programming BSc (Hons)        September 2019 - June 2022
+
+
+* Relevant Courseware:
+- Artificial Intelligence Techniques (CSY3025)
+- Databases (CSY1026)
+- Fundamentals of Computing System (CSY1043)
+- Game Techniques (CSY1024, CSY2034, CSY3030)
+- Graphics (CSY2033, CSY3028)
+- Group Project (CSY1025, CSY2035, CSY3031)
+- Indie Games Development (CSY2058)
+- Mobile Application Development (CSY2061)
+- Modern Network (CSY2026)
+- Native Programming and Compilation (CSY2059)
+- Problem Solving and Programming (CSY1020)
+- Simulation and Dynamics (CSY3045)
+- Video Games Architecture and Optimisation (CSY1044)
+
+
+ACTIVITIES, LEADERSHIP AND AWARDS
+
+
+University Competitions
+
+
+1st Place in the Digifest Hackathon (out of 7 teams)         April 2020
+
+
+* Description: Built a web application and unity game for a project to make the learning easier for students.
+
+
+MIT App Inventor | Most Liked Application (out of 177850 apps)        April 2016 – September 2020
+* Description: Built an android application (Social Network App) on the AI2 App Inventor Platform that connects to Firebase Database and lets the user create different posts.
+
+
+ZeoFlow | Open Source Software        March 2021 - December 2022
+
+
+* Description: Building open source libraries at ZeoFlow (view here)
