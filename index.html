@@ -32,7 +32,7 @@
 
 
     <!-- stylesheets -->
-    <link href="./styles/tailwindoutput.css" rel="stylesheet">
+    <link href="https://assets.teogor.dev/styles/tailwindoutput.css" rel="stylesheet">
 
     <!-- favicons -->
     <link href="favicons/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
@@ -62,7 +62,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XN9N2SV8QZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-XN9N2SV8QZ');
@@ -157,7 +161,7 @@
     </nav>
 
     <!-- content goes here -->
-    <div class="py-32 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="home">
+    <div class="py-top-128 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="home">
         <h2 class="font-extrabold text-6xl py-5 xl:mx-40 2xl:mx-80 lg:text-8xl text-white md:text-6xl cursorHover">
             Hi! I'm <span class="text-purple-500">Teodor</span> Grigor
         </h2>
@@ -172,21 +176,27 @@
                 CONNECT WITH ME
             </button>
         </a>
-
-        <p class="text-slate-300 footer mt-24 cursorHover">
-            Made with <img alt="Purple Heart Icon" class="purple-heart" src="./res/images/purple-heart.png"/> by
-            <span class="text-purple-500">Teodor Grigor</span>
-            <br>
-            Copyright &copy;<span id="year"></span> All rights reserved
-        </p>
     </div>
 </div>
 
 <div class="cursor-dot-outline"></div>
 <div class="cursor-dot"></div>
-<script src="./dist/bundle.js"></script>
-<script>document.getElementById("year").innerHTML = new Date().getFullYear().toString();</script>
+<script src="https://assets.teogor.dev/scripts/bundle.js"></script>
 
 </body>
 
+<footer id="footer"></footer>
+<script>
+    // Load the footer HTML using fetch
+    fetch('https://assets.teogor.dev/utils/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insert the footer HTML into the footer element
+            document.getElementById('footer').innerHTML = html;
+
+            // Update the current year
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear.toString();
+        });
+</script>
 </html>

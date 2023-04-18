@@ -26,7 +26,7 @@
           property="twitter:image">
 
     <!-- stylesheets -->
-    <link href="./styles/tailwindoutput.css" rel="stylesheet">
+    <link href="https://assets.teogor.dev/styles/tailwindoutput.css" rel="stylesheet">
 
     <!-- favicons -->
     <link href="favicons/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
@@ -148,7 +148,7 @@
         <div class="hidden lg:block w-96 h-96 -ml-56 pointer-events-none absolute  border-2 border-gray-600 rounded-full"></div>
     </nav>
 
-    <div class="py-32 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="contact">
+    <div class="py-top-128 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="contact">
         <h2 class="font-extrabold text-4xl py-8 xl:mx-110 text-white cursorHover">Connect with me</h2>
 
         <div class="flex justify-center">
@@ -287,21 +287,27 @@
 
         </div>
 
-        <p class="text-slate-300 footer mt-24 cursorHover">
-            Made with <img alt="Purple Heart Icon" class="purple-heart" src="./res/images/purple-heart.png"/> by
-            <span class="text-purple-500">Teodor Grigor</span>
-            <br>
-            Copyright &copy;<span id="year"></span> All rights reserved
-        </p>
-
     </div>
 </div>
 
 <div class="cursor-dot-outline"></div>
 <div class="cursor-dot"></div>
-<script src="./dist/bundle.js"></script>
-<script>document.getElementById("year").innerHTML = new Date().getFullYear().toString();</script>
+<script src="https://assets.teogor.dev/scripts/bundle.js"></script>
 
 </body>
 
+<footer id="footer"></footer>
+<script>
+    // Load the footer HTML using fetch
+    fetch('https://assets.teogor.dev/utils/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insert the footer HTML into the footer element
+            document.getElementById('footer').innerHTML = html;
+
+            // Update the current year
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear.toString();
+        });
+</script>
 </html>
