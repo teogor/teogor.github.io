@@ -1,0 +1,26 @@
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    border-radius: 9999px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.tag.selected {
+    border-radius: 9999px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+.not-selectable {
+    user-select: none;
+}
