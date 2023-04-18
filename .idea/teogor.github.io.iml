@@ -8,6 +8,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="navbar" level="application" />
     <orderEntry type="library" name="bundle" level="application" />
+    <orderEntry type="library" name="bundle" level="application" />
+    <orderEntry type="library" name="footer" level="application" />
   </component>
 </module>
