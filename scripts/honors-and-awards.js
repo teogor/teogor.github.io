@@ -1,25 +1,40 @@
-import { parseDate } from './dateUtils.js';
+import {parseDate} from './dateUtils.js';
 
 const honorsAndAwardsTemplate = document.querySelector("#honors-and-awards-template");
 const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-container");
 
-fetch('https://assets.teogor.dev/json/honors-and-awards.json')
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(educationData => {
-            const {title, place, associatedWith, issuer, issueDate} = educationData;
-            const instance = honorsAndAwardsTemplate.content.cloneNode(true);
-            instance.querySelector('h2').textContent = `${title}`;
-            if (associatedWith === "N/A") {
-                instance.querySelector('p:nth-of-type(1)').style.display = "none";
-            } else {
-                instance.querySelector('p:nth-of-type(1)').textContent = `${associatedWith}`;
-            }
-            instance.querySelector('p:nth-of-type(2)').textContent = `Issued by ${issuer}`;
-            instance.querySelector('p:nth-of-type(3)').textContent = `${formatAward(issueDate, place)}`;
-            honorsAndAwardsContainer.appendChild(instance);
-        });
+/**
+ * Fetches honors and awards data from a remote JSON file and populates the
+ * DOM with the data.
+ *
+ * @returns {Promise<void>} A Promise that resolves once the honors and awards
+ * data has been fetched and the DOM has been updated.
+ *
+ * @throws {Error} An error is thrown if the honors and awards data cannot be
+ * fetched or if there is an error updating the DOM.
+ */
+async function getHonorsAndAwards() {
+    const response = await fetch('https://assets.teogor.dev/json/honors-and-awards.json');
+    const data = await response.json();
+
+    data.forEach(educationData => {
+        const {title, place, associatedWith, issuer, issueDate} = educationData;
+        const instance = honorsAndAwardsTemplate.content.cloneNode(true);
+        instance.querySelector('h2').textContent = `${title}`;
+        if (associatedWith === "N/A") {
+            instance.querySelector('p:nth-of-type(1)').style.display = "none";
+        } else {
+            instance.querySelector('p:nth-of-type(1)').textContent = `${associatedWith}`;
+        }
+        instance.querySelector('p:nth-of-type(2)').textContent = `Issued by ${issuer}`;
+        instance.querySelector('p:nth-of-type(3)').textContent = `${formatAward(issueDate, place)}`;
+        honorsAndAwardsContainer.appendChild(instance);
     });
+}
+
+getHonorsAndAwards().catch(error => {
+    console.error(error);
+});
 
 /**
  * Returns the ordinal suffix for a given number.
