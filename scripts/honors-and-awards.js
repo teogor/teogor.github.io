@@ -32,8 +32,10 @@ async function getHonorsAndAwards() {
     });
 }
 
-getHonorsAndAwards().catch(error => {
-    console.error(error);
+window.addEventListener("load", function() {
+    getHonorsAndAwards().catch(error => {
+        console.error(error);
+    });
 });
 
 /**

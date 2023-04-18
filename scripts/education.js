@@ -28,6 +28,8 @@ async function getEducation() {
     });
 }
 
-getEducation().catch(error => {
-    console.error(error);
+window.addEventListener("load", function() {
+    getEducation().catch(error => {
+        console.error(error);
+    });
 });

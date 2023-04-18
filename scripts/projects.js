@@ -31,6 +31,8 @@ async function getProjects() {
     });
 }
 
-getProjects().catch(error => {
-    console.error(error);
+window.addEventListener("load", function() {
+    getProjects().catch(error => {
+        console.error(error);
+    });
 });

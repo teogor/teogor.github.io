@@ -75,8 +75,10 @@ async function getExperience() {
     });
 }
 
-getExperience().catch(error => {
-    console.error(error);
+window.addEventListener("load", function() {
+    getExperience().catch(error => {
+        console.error(error);
+    });
 });
 
 /**
