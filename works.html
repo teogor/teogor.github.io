@@ -29,11 +29,13 @@
           property="twitter:image">
 
     <!-- stylesheets -->
-    <link href="./styles/tailwindoutput.css" rel="stylesheet">
+    <link href="https://assets.teogor.dev/styles/tailwindoutput.css" rel="stylesheet">
 
     <!-- favicons -->
-    <link href="favicons/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
-    <link href="favicons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="favicons/android-chrome-512x512.png" rel="icon" sizes="512x512"
+          type="image/png">
+    <link href="favicons/android-chrome-192x192.png" rel="icon" sizes="192x192"
+          type="image/png">
     <link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -59,7 +61,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XN9N2SV8QZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-XN9N2SV8QZ');
@@ -155,83 +161,55 @@
     </nav>
 
     <!-- content goes here -->
-    <div class="py-32 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="works">
+    <div class="py-top-128 text-center animate-this cursor-none" data-barba="container" data-barba-namespace="works">
         <h2 class="font-extrabold text-2xl py-5 xl:mx-80 2xl:mx-110 text-white md:text-4xl cursorHover">
             Recents Works & Contributions
         </h2>
 
         <div class="flex justify-center">
-
-            <div class="grid grid-rows-3 gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:grid-rows-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
-
-                <a href="https://github.com/teogor/teogor.dev" target="_blank">
-                    <div class="py-8 px-6 sm:h-72 sm:px-10 md:px-8 h-[17rem] bg-purple-600 hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 md:h-72 lg:h-64 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6">Personal Portfolio</h2>
-                        <p class="text-lg text-slate-200">Designed personal Portfolio website for myself</p>
-                        <p class="text-lg text-slate-200 py-1 lg:py-2 w-11/12">Written with TailwindCSS, AlpineJS,
-                            BarbaJS & GSAP</p>
-
-                    </div>
-                </a>
-
-                <a href="https://play.google.com/store/apps/details?id=com.wave.livewallpaper" target="_blank">
-                    <div class="py-8 px-6 sm:h-72 sm:px-10 md:px-8 h-[16rem] bg-purple-600 hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 md:h-72 lg:h-64 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6">Wave Live Wallpapers</h2>
-                        <p class="text-lg text-slate-200">Cool live wallpapers 4K, HD backgrounds & 3D wallpaper maker
-                            to rock your phone</p>
-                        <p class="text-lg text-slate-200 py-1 lg:py-2 w-11/12">Written with Kotlin</p>
-                    </div>
-                </a>
-
-                <a href="https://play.google.com/store/apps/details?id=com.wave.keyboard" target="_blank">
-                    <div class="py-8 px-6 sm:h-72 sm:px-10 md:px-8 h-[17rem] bg-purple-600 hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 md:h-72 lg:h-64 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6">Wave Keyboard</h2>
-                        <p class="text-lg text-slate-200 py-1">Free unique super fancy themes, cool fonts, emoticons and
-                            custom skins.</p>
-                        <p class="text-lg text-slate-200 py-1 lg:py-2 w-11/12">Written with Java</p>
-                    </div>
-                </a>
-
-                <div
-                        class="hidden lg:block w-96 h-96 ml-162 -z-10 pointer-events-none absolute border-2 border-gray-600 rounded-full">
-                </div>
-
+            <div id="projects-container"
+                 class="grid gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
+                <template id="projects-template">
+                    <a target="_blank"
+                       class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                       x-intersect="$el.classList.add('fadeInUp')">
+                        <h2 class="text-2xl py-5 text-white font-semibold leading-6"></h2>
+                        <p class="text-lg text-slate-200">{{ description }}</p>
+                        <p class="text-lg text-slate-200 py-1 lg:py-2">{{ technologies }}</p>
+                    </a>
+                </template>
+                <script src="./scripts/projects.js" type="module"></script>
             </div>
-
         </div>
 
-        <a href="https://github.com/teogor?tab=repositories">
+        <a href="https://github.com/teogor?tab=repositories" target="_blank">
             <button
                     class="py-6 my-20 px-7 text-xl md:py-5 md:px-7 md:my-24 xl:my-20 xl:px-10 xl:py-7 rounded-full bg-white button transition duration-200 ease-in-out text-purple-600 hover:text-white hover:bg-purple-700"
                     x-intersect="$el.classList.add('fadeInUp')">Other
                 Contributions
             </button>
         </a>
-
-        <p class="text-slate-300 footer mt-24 cursorHover">
-            Made with <img alt="Purple Heart Icon" class="purple-heart" src="./res/images/purple-heart.png"/> by
-            <span class="text-purple-500">Teodor Grigor</span>
-            <br>
-            Copyright &copy;<span id="year"></span> All rights reserved
-        </p>
-
-        <div
-                class="hidden lg:block w-96 h-96 ml-24 pointer-events-none absolute border-2 border-gray-600 rounded-full">
-        </div>
     </div>
 </div>
 
 <div class="cursor-dot-outline"></div>
 <div class="cursor-dot"></div>
-<script src="./dist/bundle.js"></script>
-<script>document.getElementById("year").innerHTML = new Date().getFullYear().toString();</script>
+<script src="https://assets.teogor.dev/scripts/bundle.js"></script>
 
 </body>
 
+<footer id="footer"></footer>
+<script>
+    // Load the footer HTML using fetch
+    fetch('https://assets.teogor.dev/utils/partials/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insert the footer HTML into the footer element
+            document.getElementById('footer').innerHTML = html;
+
+            // Update the current year
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear.toString();
+        });
+</script>
 </html>
