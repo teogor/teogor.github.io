@@ -11,58 +11,73 @@ const EMPLOYMENT_TYPE_MAP = {
     P: 'Part-time',
 };
 
-fetch('https://assets.teogor.dev/json/experience.json')
-    .then(response => response.json())
-    .then(data => {
-        const allTags = new Set();
-        data.forEach(experienceData => {
-            const { position, company, employmentType, startDate, endDate, expertiseAreas } = experienceData;
-            const instance = experienceTemplate.content.cloneNode(true);
+/**
+ * Fetches experience data from a remote JSON file and populates the
+ * DOM with the data.
+ *
+ * @returns {Promise<void>} A Promise that resolves once the experience
+ * data has been fetched and the DOM has been updated.
+ *
+ * @throws {Error} An error is thrown if the experience data cannot be
+ * fetched or if there is an error updating the DOM.
+ */
+async function getExperience() {
+    const response = await fetch('https://assets.teogor.dev/json/experience.json');
+    const data = await response.json();
 
-            instance.querySelector('h2').textContent = position;
-            instance.querySelector('p:nth-of-type(1)').textContent = `${company} (${EMPLOYMENT_TYPE_MAP[employmentType] || 'Invalid employment type'})`;
-            instance.querySelector('p:nth-of-type(2)').textContent = `${formatDate(startDate, endDate)}`;
+    const allTags = new Set();
+    data.forEach(experienceData => {
+        const { position, company, employmentType, startDate, endDate, expertiseAreas } = experienceData;
+        const instance = experienceTemplate.content.cloneNode(true);
 
-            const tagTemplate = instance.querySelector('#tag-clone');
-            const tagsContainer = instance.querySelector('#tags');
-            const tags = expertiseAreas.map(tagName => {
-                const tagInstance = tagTemplate.cloneNode(true);
-                allTags.add(tagName);
-                tagInstance.id = `tag-${tagName}`;
-                tagInstance.textContent = `#${tagName}`;
-                return tagInstance;
-            });
-            tagsContainer.append(...tags);
+        instance.querySelector('h2').textContent = position;
+        instance.querySelector('p:nth-of-type(1)').textContent = `${company} (${EMPLOYMENT_TYPE_MAP[employmentType] || 'Invalid employment type'})`;
+        instance.querySelector('p:nth-of-type(2)').textContent = `${formatDate(startDate, endDate)}`;
 
-            const clonedTag = tagsContainer.querySelector('#tag-clone');
-            tagsContainer.removeChild(clonedTag);
-
-            const tagElements = tagsContainer.querySelectorAll('p');
-            addTagListeners(tagElements);
-
-            experienceContainer.appendChild(instance);
+        const tagTemplate = instance.querySelector('#tag-clone');
+        const tagsContainer = instance.querySelector('#tags');
+        const tags = expertiseAreas.map(tagName => {
+            const tagInstance = tagTemplate.cloneNode(true);
+            allTags.add(tagName);
+            tagInstance.id = `tag-${tagName}`;
+            tagInstance.textContent = `#${tagName}`;
+            return tagInstance;
         });
+        tagsContainer.append(...tags);
 
-        const tagList = Array.from(allTags);
-        tagList.forEach(tag => {
-            const tagElement = document.createElement('span');
-            tagElement.textContent = `#${tag}`;
-            tagElement.classList.add('tag', 'not-selectable');
-            tagElement.addEventListener('click', () => {
-                // Show only relevant experiences
-                const selectedTag = tag;
-                const isSelected = tagElement.classList.contains('selected');
-                if (isSelected) {
-                    // Deselect tag if already selected
-                    deselectAllTags();
-                } else {
-                    filterExperiencesByTag(selectedTag);
-                }
-            });
-            tagElement.selected = false;
-            experienceTagListContainer.appendChild(tagElement);
-        });
+        const clonedTag = tagsContainer.querySelector('#tag-clone');
+        tagsContainer.removeChild(clonedTag);
+
+        const tagElements = tagsContainer.querySelectorAll('p');
+        addTagListeners(tagElements);
+
+        experienceContainer.appendChild(instance);
     });
+
+    const tagList = Array.from(allTags);
+    tagList.forEach(tag => {
+        const tagElement = document.createElement('span');
+        tagElement.textContent = `#${tag}`;
+        tagElement.classList.add('tag', 'not-selectable');
+        tagElement.addEventListener('click', () => {
+            // Show only relevant experiences
+            const selectedTag = tag;
+            const isSelected = tagElement.classList.contains('selected');
+            if (isSelected) {
+                // Deselect tag if already selected
+                deselectAllTags();
+            } else {
+                filterExperiencesByTag(selectedTag);
+            }
+        });
+        tagElement.selected = false;
+        experienceTagListContainer.appendChild(tagElement);
+    });
+}
+
+getExperience().catch(error => {
+    console.error(error);
+});
 
 /**
  * Adds click event listeners to the given tags, which filter the experiences
