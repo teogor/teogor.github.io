@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function () {
     const projectsTemplate = document.querySelector("#projects-template");
     const projectsContainer = document.querySelector("#projects-container");
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch('components/works/projects.json');
         const data = await response.json();
 
-        data.forEach(({ description, link, title, tools }) => {
+        data.forEach(({description, link, title, tools}) => {
             const instance = projectsTemplate.content.cloneNode(true);
             const linkElement = instance.querySelector("a");
             const titleElement = instance.querySelector(".text-2xl");
@@ -35,4 +35,4 @@ document.addEventListener('DOMContentLoaded', function() {
     getProjects().catch(error => {
         console.error(error);
     });
-});
+};
