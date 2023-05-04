@@ -1,23 +1,38 @@
-const projectsTemplate = document.querySelector("#projects-template");
-const projectsContainer = document.querySelector("#projects-container");
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsTemplate = document.querySelector("#projects-template");
+    const projectsContainer = document.querySelector("#projects-container");
 
-const request = new XMLHttpRequest();
-request.open("GET", "components/works/projects.json", false);
-request.send();
-const data = JSON.parse(request.responseText);
-console.log(request.responseText)
+    /**
+     * Fetches projects data from a remote JSON file and populates the
+     * DOM with the data.
+     *
+     * @returns {Promise<void>} A Promise that resolves once the projects
+     * data has been fetched and the DOM has been updated.
+     *
+     * @throws {Error} An error is thrown if the projects data cannot be
+     * fetched or if there is an error updating the DOM.
+     */
+    async function getProjects() {
+        const response = await fetch('components/works/projects.json');
+        const data = await response.json();
 
-data.forEach(({ description, link, title, tools }) => {
-    const instance = projectsTemplate.content.cloneNode(true);
-    const linkElement = instance.querySelector("a");
-    const titleElement = instance.querySelector(".text-2xl");
-    const descriptionElement = instance.querySelector(".text-lg:nth-of-type(1)");
-    const toolsElement = instance.querySelector(".text-lg:nth-of-type(2)");
+        data.forEach(({ description, link, title, tools }) => {
+            const instance = projectsTemplate.content.cloneNode(true);
+            const linkElement = instance.querySelector("a");
+            const titleElement = instance.querySelector(".text-2xl");
+            const descriptionElement = instance.querySelector(".text-lg:nth-of-type(1)");
+            const toolsElement = instance.querySelector(".text-lg:nth-of-type(2)");
 
-    linkElement.href = link;
-    titleElement.innerText = title;
-    descriptionElement.innerText = description;
-    toolsElement.innerText = tools;
+            linkElement.href = link;
+            titleElement.innerText = title;
+            descriptionElement.innerText = description;
+            toolsElement.innerText = tools;
 
-    projectsContainer.appendChild(instance);
+            projectsContainer.appendChild(instance);
+        });
+    }
+
+    getProjects().catch(error => {
+        console.error(error);
+    });
 });
