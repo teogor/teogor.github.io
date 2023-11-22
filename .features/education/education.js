@@ -23,4 +23,6 @@ async function getEducation() {
         instance.querySelector('p:nth-of-type(3)').textContent = `${formatDate(startDate, endDate)}`;
         educationContainer.appendChild(instance);
     });
+
+    console.log("educationTemplate: " + educationTemplate)
 }
