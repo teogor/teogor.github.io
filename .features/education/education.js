@@ -23,7 +23,4 @@ async function getEducation() {
         instance.querySelector('p:nth-of-type(3)').textContent = `${formatDate(startDate, endDate)}`;
         educationContainer.appendChild(instance);
     });
-
-    const randomNumber = Math.random() * 1000000000000000;
-    console.log("educationTemplate<" + randomNumber + ">: " + educationTemplate)
 }

@@ -1,5 +1,11 @@
 [
   {
+    "title": "Open-3Source Contributor",
+    "description": "Enthusiastic contributor to open-source projects.",
+    "tools": "Android, KMP & Kotlin",
+    "link": "https://source.teogor.dev"
+  },
+  {
     "title": "Personal Portfolio",
     "description": "Designed personal Portfolio website for myself",
     "tools": "TailwindCSS, AlpineJS, BarbaJS & GSAP",
