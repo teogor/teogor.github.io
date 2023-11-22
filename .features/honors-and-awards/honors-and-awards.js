@@ -14,7 +14,7 @@ const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-cont
  * fetched or if there is an error updating the DOM.
  */
 async function getHonorsAndAwards() {
-    const response = await fetch(".features/education/honors-and-awards.json");
+    const response = await fetch(".features/honors-and-awards/honors-and-awards.json");
     const data = await response.json();
 
     data.forEach(educationData => {
