@@ -24,8 +24,16 @@ async function getExperience() {
     const allTags = new Set();
 
     data.forEach(experienceData => {
-        const { position, company, employmentType, startDate, endDate, expertiseAreas } = experienceData;
+        const { position, company, employmentType, startDate, expertiseAreas } = experienceData;
         const instance = experienceTemplate.content.cloneNode(true);
+        let endDate = experienceData.endDate;
+
+        if (endDate === 'P') {
+            const today = new Date();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const year = today.getFullYear().toString();
+            endDate = `${month}${year}`;
+        }
 
         instance.querySelector('h2').textContent = position;
         instance.querySelector('p:nth-of-type(1)').textContent = `${company} (${EMPLOYMENT_TYPE_MAP[employmentType] || 'Invalid employment type'})`;
