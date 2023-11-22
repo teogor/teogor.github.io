@@ -1,4 +1,4 @@
-import { formatDate } from './dateUtils.js';
+import { formatDate } from '../../scripts/dateUtils.js';
 
 const educationTemplate = document.querySelector("#education-template");
 const educationContainer = document.querySelector("#education-container");
@@ -14,8 +14,9 @@ const educationContainer = document.querySelector("#education-container");
  * fetched or if there is an error updating the DOM.
  */
 async function getEducation() {
-    const response = await fetch('https://assets.teogor.dev/json/education.json');
+    const response = await fetch("education.json");
     const data = await response.json();
+    console.log(data)
 
     data.forEach(educationData => {
         const {school, degree, fieldOfStudy, startDate, endDate} = educationData;
