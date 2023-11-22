@@ -14,9 +14,8 @@ const educationContainer = document.querySelector("#education-container");
  * fetched or if there is an error updating the DOM.
  */
 async function getEducation() {
-    const response = await fetch("education.json");
+    const response = await fetch(".features/education/education.json");
     const data = await response.json();
-    console.log(data)
 
     data.forEach(educationData => {
         const {school, degree, fieldOfStudy, startDate, endDate} = educationData;

@@ -22,7 +22,7 @@ const EMPLOYMENT_TYPE_MAP = {
  * fetched or if there is an error updating the DOM.
  */
 async function getExperience() {
-    const response = await fetch("experience.json");
+    const response = await fetch(".features/education/experience.json");
     const data = await response.json();
 
     const allTags = new Set();
