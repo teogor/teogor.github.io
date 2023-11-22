@@ -12,5 +12,9 @@
     <orderEntry type="library" name="bundle" level="application" />
     <orderEntry type="library" name="bundle" level="application" />
     <orderEntry type="library" name="footer" level="application" />
+    <orderEntry type="library" name="tailwindoutput" level="application" />
+    <orderEntry type="library" name="navbar" level="application" />
+    <orderEntry type="library" name="footer" level="application" />
+    <orderEntry type="library" name="bundle" level="application" />
   </component>
 </module>
