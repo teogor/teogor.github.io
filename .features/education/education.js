@@ -1,8 +1,3 @@
-import { formatDate } from '../../scripts/dateUtils.js';
-
-const educationTemplate = document.querySelector("#education-template");
-const educationContainer = document.querySelector("#education-container");
-
 /**
  * Fetches education data from a remote JSON file and populates the
  * DOM with the data.
@@ -16,7 +11,9 @@ const educationContainer = document.querySelector("#education-container");
 async function getEducation() {
     const response = await fetch(".features/education/education.json");
     const data = await response.json();
-
+    const educationTemplate = document.querySelector("#education-template");
+    const educationContainer = document.querySelector("#education-container");
+    
     data.forEach(educationData => {
         const {school, degree, fieldOfStudy, startDate, endDate} = educationData;
         const instance = educationTemplate.content.cloneNode(true);
@@ -28,8 +25,8 @@ async function getEducation() {
     });
 }
 
-window.addEventListener("load", function() {
-    getEducation().catch(error => {
-        console.error(error);
-    });
-});
+// window.addEventListener("load", function() {
+//     getEducation().catch(error => {
+//         console.error(error);
+//     });
+// });

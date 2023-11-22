@@ -67,9 +67,11 @@
     <!-- End Global site tag (gtag.js) - Google Analytics -->
     <script src="https://assets.teogor.dev/components/navbar/navbar.js" type="module"></script>
     <script src="https://assets.teogor.dev/components/footer/footer.js" type="module"></script>
-    <script src=".features/experience/experience.js" type="module"></script>
-    <script src=".features/education/education.js" type="module"></script>
-    <script src=".features/honors-and-awards/honors-and-awards.js" type="module"></script>
+
+    <script src="scripts/dateUtils.js"></script>
+    <script src=".features/education/education.js"></script>
+    <script src=".features/experience/experience.js"></script>
+    <script src=".features/honors-and-awards/honors-and-awards.js"></script>
 </head>
 
 <body data-barba="wrapper" x-data>
@@ -110,6 +112,7 @@
                         </div>
                     </div>
                 </template>
+                <script>getExperience()</script>
             </div>
         </div>
 
@@ -128,6 +131,7 @@
                         <p class="text-slg text-slate-200 py-1 lg:py-2"></p>
                     </div>
                 </template>
+                <script>getEducation()</script>
             </div>
         </div>
 
@@ -146,6 +150,7 @@
                         <p class="text-slg text-slate-200 py-1 lg:py-2"></p>
                     </div>
                 </template>
+                <script>getHonorsAndAwards()</script>
             </div>
         </div>
 

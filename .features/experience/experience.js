@@ -1,9 +1,3 @@
-import { formatDate } from '../../scripts/dateUtils.js';
-
-const experienceTemplate = document.querySelector('#experience-template');
-const experienceContainer = document.querySelector('#experience-container');
-const experienceTagListContainer = document.querySelector('#experience-tag-list');
-
 const EMPLOYMENT_TYPE_MAP = {
     C: 'Contract',
     F: 'Full-time',
@@ -24,8 +18,11 @@ const EMPLOYMENT_TYPE_MAP = {
 async function getExperience() {
     const response = await fetch(".features/experience/experience.json");
     const data = await response.json();
-
+    const experienceTemplate = document.querySelector('#experience-template');
+    const experienceContainer = document.querySelector('#experience-container');
+    const experienceTagListContainer = document.querySelector('#experience-tag-list');
     const allTags = new Set();
+
     data.forEach(experienceData => {
         const { position, company, employmentType, startDate, endDate, expertiseAreas } = experienceData;
         const instance = experienceTemplate.content.cloneNode(true);
