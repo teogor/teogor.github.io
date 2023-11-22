@@ -1,4 +1,4 @@
-import {parseDate} from './dateUtils.js';
+import {parseDate} from '../../scripts/dateUtils.js';
 
 const honorsAndAwardsTemplate = document.querySelector("#honors-and-awards-template");
 const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-container");
@@ -14,7 +14,7 @@ const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-cont
  * fetched or if there is an error updating the DOM.
  */
 async function getHonorsAndAwards() {
-    const response = await fetch('https://assets.teogor.dev/json/honors-and-awards.json');
+    const response = await fetch("honors-and-awards.json");
     const data = await response.json();
 
     data.forEach(educationData => {

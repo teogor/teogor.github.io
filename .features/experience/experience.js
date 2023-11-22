@@ -1,4 +1,4 @@
-import { formatDate } from './dateUtils.js';
+import { formatDate } from '../../scripts/dateUtils.js';
 
 const experienceTemplate = document.querySelector('#experience-template');
 const experienceContainer = document.querySelector('#experience-container');
@@ -22,7 +22,7 @@ const EMPLOYMENT_TYPE_MAP = {
  * fetched or if there is an error updating the DOM.
  */
 async function getExperience() {
-    const response = await fetch('https://assets.teogor.dev/json/experience.json');
+    const response = await fetch("experience.json");
     const data = await response.json();
 
     const allTags = new Set();
