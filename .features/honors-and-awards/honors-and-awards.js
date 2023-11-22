@@ -1,8 +1,3 @@
-import {parseDate} from '../../scripts/dateUtils.js';
-
-const honorsAndAwardsTemplate = document.querySelector("#honors-and-awards-template");
-const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-container");
-
 /**
  * Fetches honors and awards data from a remote JSON file and populates the
  * DOM with the data.
@@ -16,6 +11,8 @@ const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-cont
 async function getHonorsAndAwards() {
     const response = await fetch(".features/honors-and-awards/honors-and-awards.json");
     const data = await response.json();
+    const honorsAndAwardsTemplate = document.querySelector("#honors-and-awards-template");
+    const honorsAndAwardsContainer = document.querySelector("#honors-and-awards-container");
 
     data.forEach(educationData => {
         const {title, place, associatedWith, issuer, issueDate} = educationData;
@@ -31,12 +28,6 @@ async function getHonorsAndAwards() {
         honorsAndAwardsContainer.appendChild(instance);
     });
 }
-
-window.addEventListener("load", function() {
-    getHonorsAndAwards().catch(error => {
-        console.error(error);
-    });
-});
 
 /**
  * Returns the ordinal suffix for a given number.

@@ -5,7 +5,7 @@
  * @param {string} endDate - The end date in the format "MMYYYY".
  * @returns {string} The duration between the two dates in years and months.
  */
-export function calculateDuration(startDate, endDate) {
+function calculateDuration(startDate, endDate) {
     const startMonth = parseInt(startDate.substring(0, 2));
     const startYear = parseInt(startDate.substring(2));
     const endMonth = parseInt(endDate.substring(0, 2));
@@ -34,7 +34,7 @@ export function calculateDuration(startDate, endDate) {
  * where "Month Year" is the parsed start and end date, and "Duration" is the
  * difference between the start and end date in years and months.
  */
-export function formatDate(startDate, endDate) {
+function formatDate(startDate, endDate) {
     const duration = calculateDuration(startDate, endDate);
     const formattedStartDate = parseDate(startDate);
     const formattedEndDate = parseDate(endDate);
@@ -48,7 +48,7 @@ export function formatDate(startDate, endDate) {
  * @param {string} dateString - The date string to be formatted.
  * @returns {string} The formatted date string.
  */
-export function parseDate(dateString) {
+function parseDate(dateString) {
     const monthNames = [
         "January", "February", "March",
         "April", "May", "June", "July",
