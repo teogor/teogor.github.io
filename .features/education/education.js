@@ -24,5 +24,6 @@ async function getEducation() {
         educationContainer.appendChild(instance);
     });
 
-    console.log("educationTemplate: " + educationTemplate)
+    const randomNumber = Math.random() * 1000000000000000;
+    console.log("educationTemplate<" + randomNumber + ">: " + educationTemplate)
 }
