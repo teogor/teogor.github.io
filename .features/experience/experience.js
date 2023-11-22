@@ -72,12 +72,6 @@ async function getExperience() {
     });
 }
 
-window.addEventListener("load", function() {
-    getExperience().catch(error => {
-        console.error(error);
-    });
-});
-
 /**
  * Adds click event listeners to the given tags, which filter the experiences
  * displayed based on the tag that was clicked.

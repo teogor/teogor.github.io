@@ -13,7 +13,7 @@ async function getEducation() {
     const data = await response.json();
     const educationTemplate = document.querySelector("#education-template");
     const educationContainer = document.querySelector("#education-container");
-    
+
     data.forEach(educationData => {
         const {school, degree, fieldOfStudy, startDate, endDate} = educationData;
         const instance = educationTemplate.content.cloneNode(true);
@@ -24,9 +24,3 @@ async function getEducation() {
         educationContainer.appendChild(instance);
     });
 }
-
-// window.addEventListener("load", function() {
-//     getEducation().catch(error => {
-//         console.error(error);
-//     });
-// });

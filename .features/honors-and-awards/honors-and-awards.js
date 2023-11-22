@@ -29,12 +29,6 @@ async function getHonorsAndAwards() {
     });
 }
 
-window.addEventListener("load", function() {
-    getHonorsAndAwards().catch(error => {
-        console.error(error);
-    });
-});
-
 /**
  * Returns the ordinal suffix for a given number.
  *
