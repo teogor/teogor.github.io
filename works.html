@@ -101,15 +101,61 @@
         <div class="flex justify-center">
             <div id="projects-container"
                  class="grid gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
-                <template id="projects-template">
-                    <a target="_blank"
-                       class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                       x-intersect="$el.classList.add('fadeInUp')">
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6"></h2>
-                        <p class="text-lg text-slate-200">{{ description }}</p>
-                        <p class="text-lg text-slate-200 py-1 lg:py-2">{{ technologies }}</p>
-                    </a>
-                </template>
+
+                <!-- Project 1 -->
+                <a href="https://source.teogor.dev" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Open-Source Contributor</h2>
+                    <p class="text-lg text-slate-200">Enthusiastic contributor to open-source projects.</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">Android, KMP & Kotlin</p>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://github.com/teogor/teogor.github.io" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Personal Portfolio</h2>
+                    <p class="text-lg text-slate-200">Designed personal Portfolio website for myself</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">TailwindCSS, AlpineJS, BarbaJS & GSAP</p>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://play.google.com/store/apps/details?id=com.marleyspoon" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Marley Spoon</h2>
+                    <p class="text-lg text-slate-200">Marley Spoon makes delicious weeknight cooking simple with exciting recipes and pre-portioned ingredients delivered direct to your door.</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">Kotlin</p>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="https://play.google.com/store/apps/details?id=com.dinnerly" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Dinnerly</h2>
+                    <p class="text-lg text-slate-200">Dinnerly replaces tedious meal planning and grocery shopping with tasty, easy-to-make recipes and pre-portioned ingredients delivered direct to your door.</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">Kotlin</p>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="https://play.google.com/store/apps/details?id=com.wave.livewallpaper" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Wave Live Wallpapers</h2>
+                    <p class="text-lg text-slate-200">Cool live wallpapers 4K, HD backgrounds & 3D wallpaper maker to rock your phone</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">Kotlin</p>
+                </a>
+
+                <!-- Project 6 -->
+                <a href="https://play.google.com/store/apps/details?id=com.wave.keyboard" target="_blank"
+                   class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                   x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Wave Keyboard</h2>
+                    <p class="text-lg text-slate-200">Free unique super fancy themes, cool fonts, emoticons and custom skins.</p>
+                    <p class="text-lg text-slate-200 py-1 lg:py-2">Java</p>
+                </a>
+
             </div>
         </div>
 
@@ -127,7 +173,6 @@
 <div class="cursor-dot"></div>
 
 <script src="https://assets.teogor.dev/scripts/bundle.js"></script>
-<script src="/components/works/projects.js" type="module"></script>
 
 </body>
 
