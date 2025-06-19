@@ -214,3 +214,41 @@
 
 <footer id="footer"></footer>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Collect all tags from experiences
+        const experiences = document.querySelectorAll('#experience-container .experience');
+        const tagSet = new Set();
+        experiences.forEach(exp => {
+            exp.querySelectorAll('.tag').forEach(tagEl => {
+                tagSet.add(tagEl.textContent.trim());
+            });
+        });
+
+        // Render tag filter buttons
+        const tagListContainer = document.getElementById('experience-tag-list');
+        tagSet.forEach(tag => {
+            const btn = document.createElement('button');
+            btn.textContent = tag;
+            btn.className = 'tag not-selectable mx-1 px-2 py-1 rounded bg-purple-700 hover:bg-purple-500 transition-all';
+            btn.addEventListener('click', function() {
+                // Toggle selection
+                const isSelected = btn.classList.toggle('selected');
+                // Deselect all other tags
+                tagListContainer.querySelectorAll('button').forEach(b => {
+                    if (b !== btn) b.classList.remove('selected');
+                });
+                // Show/hide experiences
+                experiences.forEach(exp => {
+                    const tags = Array.from(exp.querySelectorAll('.tag')).map(t => t.textContent.trim());
+                    if (isSelected) {
+                        exp.style.display = tags.includes(tag) ? 'block' : 'none';
+                    } else {
+                        exp.style.display = 'block';
+                    }
+                });
+            });
+            tagListContainer.appendChild(btn);
+        });
+    });
+</script>
