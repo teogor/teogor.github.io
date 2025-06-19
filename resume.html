@@ -69,9 +69,6 @@
     <script src="https://assets.teogor.dev/components/footer/footer.js" type="module"></script>
 
     <script src="scripts/dateUtils.js"></script>
-    <script src=".features/education/education.js"></script>
-    <script src=".features/experience/experience.js"></script>
-    <script src=".features/honors-and-awards/honors-and-awards.js"></script>
 </head>
 
 <body data-barba="wrapper" x-data>
@@ -101,18 +98,58 @@
 
         <div class="flex justify-center">
             <div id="experience-container" class="grid gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
-                <template id="experience-template">
-                    <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6"></h2>
-                        <p class="text-lg text-slate-200"></p>
-                        <p class="text-slg text-slate-200 py-1 lg:py-2"></p>
-                        <div id="tags" class="flex flex-wrap justify-center items-center">
-                             <p id="tag-clone" class="tag not-selectable">#empty</p>
-                        </div>
+
+                <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Android Developer</h2>
+                    <p class="text-lg text-slate-200">MarleySpoon (Contract)</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">06/2022 – Present</p>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <p class="tag not-selectable">#android</p>
                     </div>
-                </template>
-                <script>getExperience()</script>
+                </div>
+
+                <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Android Developer</h2>
+                    <p class="text-lg text-slate-200">Wave Studio (Contract)</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">05/2021 – 04/2022</p>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <p class="tag not-selectable">#android</p>
+                    </div>
+                </div>
+
+                <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Android Developer</h2>
+                    <p class="text-lg text-slate-200">ZeoFlow (Full-time)</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">09/2019 – 04/2021</p>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <p class="tag not-selectable">#android</p>
+                    </div>
+                </div>
+
+                <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Game Developer</h2>
+                    <p class="text-lg text-slate-200">Pentalog (Internship)</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">06/2019 – 07/2019</p>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <p class="tag not-selectable">#game</p>
+                        <p class="tag not-selectable">#web</p>
+                    </div>
+                </div>
+
+                <div class="experience py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Jr. Android Developer</h2>
+                    <p class="text-lg text-slate-200">DolphPire (Part-time)</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">09/2017 – 06/2019</p>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <p class="tag not-selectable">#android</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -122,16 +159,15 @@
 
         <div class="flex justify-center">
             <div id="education-container" class="grid gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
-                <template id="education-template">
-                    <div class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6"></h2>
-                        <p class="text-lg text-slate-200"></p>
-                        <p class="text-lg text-slate-200"></p>
-                        <p class="text-slg text-slate-200 py-1 lg:py-2"></p>
-                    </div>
-                </template>
-                <script>getEducation()</script>
+
+                <div class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">University of Northampton</h2>
+                    <p class="text-lg text-slate-200">Bachelor of Science (BSc)</p>
+                    <p class="text-lg text-slate-200">Games Programming</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">09/2019 – 06/2022</p>
+                </div>
+
             </div>
         </div>
 
@@ -141,16 +177,23 @@
 
         <div class="flex justify-center">
             <div id="honors-and-awards-container" class="grid gap-2 grid-flow-row sm:mt-12 sm:grid-flow-row sm:grid-cols-2 sm:gap-6 lg:grid-col-2 lg:grid-flow-row lg:gap-8">
-                <template id="honors-and-awards-template">
-                    <div class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
-                         x-intersect="$el.classList.add('fadeInUp')">
-                        <h2 class="text-2xl py-5 text-white font-semibold leading-6"></h2>
-                        <p class="text-lg text-slate-200"></p>
-                        <p class="text-lg text-slate-200"></p>
-                        <p class="text-slg text-slate-200 py-1 lg:py-2"></p>
-                    </div>
-                </template>
-                <script>getHonorsAndAwards()</script>
+
+                <div class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">Digifest Hackathon</h2>
+                    <p class="text-lg text-slate-200">Student at University of Northampton</p>
+                    <p class="text-lg text-slate-200">Issued by JISC</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">04/2020, 1st Place</p>
+                </div>
+
+                <div class="py-8 px-6 sm:px-10 md:px-8 bg-purple-600 text-center hover:bg-purple-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 sm:mt-0 lg:w-[32rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl"
+                     x-intersect="$el.classList.add('fadeInUp')">
+                    <h2 class="text-2xl py-5 text-white font-semibold leading-6">App Inventor (MIT AI2)</h2>
+                    <p class="text-lg text-slate-200" style="display:none;"></p>
+                    <p class="text-lg text-slate-200">Issued by MIT AI2</p>
+                    <p class="text-slg text-slate-200 py-1 lg:py-2">05/2016, 1st Place</p>
+                </div>
+
             </div>
         </div>
 
@@ -171,3 +214,41 @@
 
 <footer id="footer"></footer>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Collect all tags from experiences
+        const experiences = document.querySelectorAll('#experience-container .experience');
+        const tagSet = new Set();
+        experiences.forEach(exp => {
+            exp.querySelectorAll('.tag').forEach(tagEl => {
+                tagSet.add(tagEl.textContent.trim());
+            });
+        });
+
+        // Render tag filter buttons
+        const tagListContainer = document.getElementById('experience-tag-list');
+        tagSet.forEach(tag => {
+            const btn = document.createElement('button');
+            btn.textContent = tag;
+            btn.className = 'tag not-selectable mx-1 px-2 py-1 rounded bg-purple-700 hover:bg-purple-500 transition-all';
+            btn.addEventListener('click', function() {
+                // Toggle selection
+                const isSelected = btn.classList.toggle('selected');
+                // Deselect all other tags
+                tagListContainer.querySelectorAll('button').forEach(b => {
+                    if (b !== btn) b.classList.remove('selected');
+                });
+                // Show/hide experiences
+                experiences.forEach(exp => {
+                    const tags = Array.from(exp.querySelectorAll('.tag')).map(t => t.textContent.trim());
+                    if (isSelected) {
+                        exp.style.display = tags.includes(tag) ? 'block' : 'none';
+                    } else {
+                        exp.style.display = 'block';
+                    }
+                });
+            });
+            tagListContainer.appendChild(btn);
+        });
+    });
+</script>
